@@ -2,7 +2,10 @@
 All submissions for Kaggle competitions that I have been, and going to be participating
 
 ----
-###[Digit Recognizer](https://www.kaggle.com/ajisamudra/solving-mnist-using-cnn-mlp-and-stacking)
+## Digit Recognizer
+
+[Notebook](https://www.kaggle.com/ajisamudra/solving-mnist-using-cnn-mlp-and-stacking)
+
 **Problem statement** : Predict digit value given handwriting picture (28 x 28 pixel).
 
 **Type** : Multi-class classification (0-9 digit)
@@ -18,7 +21,10 @@ All submissions for Kaggle competitions that I have been, and going to be partic
 * 5th model using tuned Convolutional Neural Network (CNN) get **0.9910 Accuracy**
 
 ----
-###[NLP with Disaster Tweet](https://www.kaggle.com/ajisamudra/nlp-count-tf-idf-hashing-vectorizer)
+## NLP with Disaster Tweet
+
+[Notebook](https://www.kaggle.com/ajisamudra/nlp-count-tf-idf-hashing-vectorizer)
+
 **Problem statement** : Predict whether the tweet represent real disaster or not given the text of tweet.
 
 **Type** : Binary classification
@@ -35,7 +41,10 @@ All submissions for Kaggle competitions that I have been, and going to be partic
 * 6th model using Logistic Regression and adjusted hyperparameter Count Vectorizer get **0.79856 F1 score**
 
 ----
-###[Categorical Feature Encoding Challenge](https://www.kaggle.com/ajisamudra/modelling-with-categorical-features)
+## Categorical Feature Encoding Challenge
+
+[Notebook](https://www.kaggle.com/ajisamudra/modelling-with-categorical-features)
+
 **Problem statement** :  Get highest evaluation metric given several categorical features.
 
 **Type** : Binary classification
@@ -50,7 +59,10 @@ All submissions for Kaggle competitions that I have been, and going to be partic
 * 4th model using Ensemble of LGBM, CatBoost, and Logistic Regression get **0.78273 AUC**
 
 ----
-###[House Price Prediction](https://www.kaggle.com/ajisamudra/house-price-prediction)
+## House Price Prediction
+
+[Notebook](https://www.kaggle.com/ajisamudra/house-price-prediction)
+
 **Problem statement** : Predict house price given many features which describe house condition and residential area.
 
 **Type** : Regression
@@ -62,7 +74,10 @@ All submissions for Kaggle competitions that I have been, and going to be partic
 * 1st model using Random Forest get **0.14405 RMSE**
 
 ----
-###[Titanic Machine Learning from Disaster](https://www.kaggle.com/ajisamudra/survivor-of-titanic-prediction)
+## Titanic Machine Learning from Disaster
+
+[Notebook](https://www.kaggle.com/ajisamudra/survivor-of-titanic-prediction)
+
 **Problem statement** : Predict who survived given passengers information.
 
 **Type** : Binary classification
@@ -74,7 +89,10 @@ All submissions for Kaggle competitions that I have been, and going to be partic
 * 1st model using Random Forest get **0.79425 Accuracy**
 
 ----
-###[Pokemon Combat Winner Prediction](https://www.kaggle.com/ajisamudra/winner-in-pokemon-combat-prediction)
+## Pokemon Combat Winner Prediction
+
+[Notebook](https://www.kaggle.com/ajisamudra/winner-in-pokemon-combat-prediction)
+
 **Problem statement** : Spot machine learning opportunity using Pokemon combat dataset. Predict winner pokemon given battle between two pokemons information.
 
 **Type** : Binary classification
