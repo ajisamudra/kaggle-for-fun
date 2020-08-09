@@ -2,6 +2,60 @@
 All submissions for Kaggle competitions that I have been, and going to be participating
 
 ----
+## Product Classification (Image data)
+
+[Notebook](https://www.kaggle.com/ajisamudra/shopee-object-detection-tpu-efficientnetb6?scriptVersionId=37906178)
+
+**Problem statement** : Predict product class given noisy-colorful image (the images have no standard size).
+
+**Type** : Multi-class classification (42 classes, imbalanced target distribution)
+
+**Evaluation** : top-1 Accuracy
+
+**My score** :
+
+* 1st baseline model using simple transfer learning Inception Resnet v2 get 0.678 Accuracy
+* 2nd model using data augmentation and transfer learning Xception get 0.714 Accuracy
+* 3rd model using Xception with longer training epoch get 0.780 Accuracy
+* 4th model using EfficientNetB4/5 with scheduled learning rate (LR) get 0.818 Accuracy
+* 5th model using EfficientNetB6 with scheduled LR + drop small images get **0.823 Accuracy**
+
+----
+## Sentiment Classification (Text data)
+
+[Notebook](https://www.kaggle.com/ajisamudra/rating-clf-preprocessed)
+
+**Problem statement** : Predict rating for given review text (the text is in English and might have Bahasa slang).
+
+**Type** : Multi-class classification (5 classes, imbalanced target distribution)
+
+**Evaluation** : top-1 Accuracy
+
+**My score** :
+
+* 1st baseline model using plain CountVectorizer and plain Logistic Regression get 0.407 Accuracy
+* 2nd model using preprocessed text, plain TFIDF Vectorizer and plain Logistic Regression get 0.412 Accuracy
+* 3rd model using preprocessed text, and FastText model get 0.412 Accuracy
+* 4th model using preprocessed text, text augmentation, TFIDF Vectorizer and tuned Logistic Regression get **0.435 Accuracy**
+
+----
+## Marketing Response Classification (Tabular data)
+
+[Notebook](https://www.kaggle.com/ajisamudra/shopee-marketing-logreg)
+
+**Problem statement** : Predict user response to marketing email, given both user&email information and user historical behavior in app.
+
+**Type** : Binary classification (1: open, 0: didn't open, imbalanced target distribution)
+
+**Evaluation** : Matthews correlation coefficient (MCC)
+
+**My score** :
+
+* 1st baseline model simple imputation (no user information) and plain LGBM get 0.4969 MCC
+* 2nd model using simple feature engineering in user information, dropping unnecessary features, plain LGBM get 0.5218 MCC
+* 3rd model using more feature engineering, selecting the significant features, and tuned Logistic Regression get **0.5281 MCC**
+
+----
 ## Digit Recognizer
 
 [Notebook](https://www.kaggle.com/ajisamudra/solving-mnist-using-cnn-mlp-and-stacking)
@@ -27,7 +81,7 @@ All submissions for Kaggle competitions that I have been, and going to be partic
 
 **Problem statement** : Predict whether the tweet represent real disaster or not given the text of tweet.
 
-**Type** : Binary classification
+**Type** : Binary classification (1: real disaster, 0: fake, imbalanced target distribution)
 
 **Evaluation** : F1 score
 
@@ -47,7 +101,7 @@ All submissions for Kaggle competitions that I have been, and going to be partic
 
 **Problem statement** :  Get highest evaluation metric given several categorical features.
 
-**Type** : Binary classification
+**Type** : Binary classification (imbalanced target distribution)
 
 **Evaluation** : AUC
 
