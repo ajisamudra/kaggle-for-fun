@@ -2,6 +2,33 @@
 All submissions for Kaggle competitions that I have been, and going to be participating
 
 ----
+## Product Similarity (Image & text data)
+[Notebook](https://www.kaggle.com/ajisamudra/product-matching-final-inference-densedistance?scriptVersionId=48253344)
+
+**Problem statement** : Given image and title of two items, predict whether the two items are similar or not.
+
+**Type** : Binary classification (1: match; 0: not match)
+
+**Evaluation** : F1 score
+
+**Additional context** : `there were two test sets`
+1. the first was given before the real competiton; it had 207 samples;
+2. the second was given in the real competition which only last for 4 hours; it had 32.6k samples; 
+
+**My score** :
+
+* 1st model concatenation embedding of 2 images from DenseNet201 get 0.71493 in first test set
+* 2nd model concatenation embedding of 2 images from Xception + label smoothing get 0.88111 in first test set
+* 3rd model concatenation embedding of 2 images from DenseNet201 + LR scheduler get **1.0 F1 score in first test set, BUT 0.69018 F1 score in second test set**
+* final model using distance features (Cosine, Manhattan, etc) of 2 images using embedding from DenseNet201 get 0.88370 F1 score in first test set, **0.79877 F1 score in second test set**
+
+**Learnings** :
+1. Experimenting with image embeddings for similarity learning; the more dense representation the better, that's why we choose DenseNet201 over Xception as the final model
+2. Experimenting with label smoothing to regularize the model; it helps when the label is noisy
+3. Learn the hard way about overfitting model to the public leaderboard in the first test set
+4. In **similarity learning**, we need to build features that represent how different/similar two objects are, not only the concatenation of two objects
+
+----
 ## Product Classification (Image data)
 
 [Notebook](https://www.kaggle.com/ajisamudra/shopee-object-detection-tpu-efficientnetb6?scriptVersionId=37906178)
